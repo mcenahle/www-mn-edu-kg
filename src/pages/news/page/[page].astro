@@ -2,7 +2,20 @@
 import Navbar from "../../../layouts/Navbar.astro";
 import Layout from "../../../layouts/Layout.astro";
 import { Icon } from "astro-icon/components";
-import { news } from "../../../data/news";
+
+const modules = import.meta.glob("../*.md", { eager: true });
+
+const news = Object.entries(modules)
+  .map(([path, module]: any) => {
+    const slug = path.replace("../", "").replace(".md", "");
+
+    return {
+      title: module.frontmatter.title,
+      date: module.frontmatter.date,
+      url: `/news/${slug}/`,
+    };
+  })
+  .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
 export function getStaticPaths() {
   const pageSize = 10;
