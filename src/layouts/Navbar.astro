@@ -1,0 +1,82 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<meta charset="utf-8" />
+
+<nav class="navbar navbar-expand-md bg-custom navbar-dark fixed-top">
+  <!-- Brand -->
+  <a class="navbar-brand" href="/">
+    <img src="/favicon.ico" alt="Logo" style="width:40px; margin-right: 6px;" />
+    www.mn.edu.kg
+  </a>
+
+  <!-- Toggler/collapsibe Button -->
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#collapsibleNavbar"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Navbar links -->
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav ms-3 me-3">
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          href="https://www.renpy.org/"
+          target="_blank"
+          style="display: flex; justify-content: space-between"
+          >Ren'Py&nbsp;<Icon name="mdi:open-in-new" /></a
+        >
+      </li>
+      <li class="nav-item dropdown">
+        <a
+          class="nav-link dropdown-toggle"
+          href="#"
+          id="navbardrop"
+          data-bs-toggle="dropdown"
+        >
+          本网站
+        </a>
+        <div class="dropdown-menu m-0 border-0 shadow-sm p-2 dropdown-menu-end">
+          <a
+            class="dropdown-item px-3 py-2 rounded"
+            href="/news/"
+            style="display: flex; justify-content: space-between"
+            >站点新闻 <Icon name="mdi:arrow-top-right" /></a
+          >
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a
+          class="nav-link dropdown-toggle"
+          href="#"
+          id="navbardrop"
+          data-bs-toggle="dropdown"
+        >
+          个人运行的网站
+        </a>
+        <div class="dropdown-menu m-0 border-0 shadow-sm p-2 dropdown-menu-end">
+          <a
+            class="dropdown-item px-3 py-2 rounded"
+            href="https://hi.mcenahle.page"
+            target="_blank"
+            style="display: flex; justify-content: space-between"
+            >个人主页网站 <Icon name="mdi:open-in-new" /></a
+          >
+          <a
+            class="dropdown-item px-3 py-2 rounded"
+            href="https://blog.mcenahle.page"
+            target="_blank"
+            style="display: flex; justify-content: space-between"
+            >博客网站（梅之夏）<Icon name="mdi:open-in-new" /></a
+          >
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>

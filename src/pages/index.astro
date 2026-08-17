@@ -1,0 +1,26 @@
+---
+import Navbar from "../layouts/Navbar.astro";
+import Layout from "../layouts/Layout.astro";
+import { Icon } from "astro-icon/components";
+---
+
+<Navbar />
+
+<title>www.mn.edu.kg</title>
+
+<Layout>
+  <div id="container">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">www.mn.edu.kg</h4>
+        <p class="card-text">
+          一个开发人员出于整活目的创建的 <code>.edu.kg</code
+          >。非用于大学相关教育目的。
+        </p>
+        <a href="/news/" class="card-link"
+          ><u>查看本网站相关新闻公告</u> <Icon name="mdi:arrow-top-right" /></a
+        >
+      </div>
+    </div>
+  </div>
+</Layout>

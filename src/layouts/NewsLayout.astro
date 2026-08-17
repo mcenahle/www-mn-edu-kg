@@ -1,0 +1,45 @@
+---
+import Layout from "./Layout.astro";
+import Navbar from "./Navbar.astro";
+import { Icon } from "astro-icon/components";
+
+interface Props {
+  title: string;
+  date: string;
+  // numeric_version: string;
+}
+
+const { frontmatter } = Astro.props;
+---
+
+<meta charset="utf-8" />
+<title>{frontmatter.title}</title>
+
+<Navbar />
+
+<Layout>
+  <div id="container">
+    <div class="domain-card bg-white shadow-sm overflow-hidden rounded-3">
+      <div class="domain-card-header py-3 px-4 border-bottom">
+        <div class="text-black fs-5 fw-bold">
+          {frontmatter.title}
+        </div>
+        <div class="d-flex align-items-center justify-content-between">
+          <div class="small text-muted mt-2">
+            <Icon name="mdi:calendar" /> 日期：{frontmatter.date}
+          </div>
+          <div class="share-warp small text-muted mt-2">
+            <!-- <Icon name="mdi:android-studio" /> 数值版本号：{numeric_version} -->
+          </div>
+        </div>
+      </div>
+      <div class="domain-card-body p-4 lh2">
+        <slot />
+        <hr style="margin-top: 36px;" />
+        <a class="btn btn-primary" href="/news/" role="button"
+          ><Icon name="mdi:arrow-top-left" /> 返回</a
+        >
+      </div>
+    </div>
+  </div>
+</Layout>
