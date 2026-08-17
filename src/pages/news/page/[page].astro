@@ -3,45 +3,45 @@ import Navbar from "../../../layouts/Navbar.astro";
 import Layout from "../../../layouts/Layout.astro";
 import { Icon } from "astro-icon/components";
 
-const modules = import.meta.glob("../*.md", { eager: true });
-
-const news = Object.entries(modules)
-  .map(([path, module]: any) => {
-    const slug = path.replace("../", "").replace(".md", "");
-
-    return {
-      title: module.frontmatter.title,
-      date: module.frontmatter.date,
-      url: `/news/${slug}/`,
-    };
-  })
-  .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
-
 export function getStaticPaths() {
+  const modules = import.meta.glob("../*.md", { eager: true });
+
+  const news = Object.entries(modules)
+    .map(([path, module]: any) => {
+      const slug = path.replace("../", "").replace(".md", "");
+
+      return {
+        title: module.frontmatter.title,
+        date: module.frontmatter.date,
+        url: `/news/${slug}/`,
+      };
+    })
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+
   const pageSize = 10;
   const totalPages = Math.ceil(news.length / pageSize);
 
   return Array.from({ length: Math.max(0, totalPages - 1) }, (_, index) => {
     const page = index + 2;
+    const start = (page - 1) * pageSize;
 
     return {
       params: {
         page: String(page),
       },
+
       props: {
         page,
         totalPages,
+
+        // 直接把这一页的文章一起传出去
+        posts: news.slice(start, start + pageSize),
       },
     };
   });
 }
 
-const pageSize = 10;
-
-const { page, totalPages } = Astro.props;
-
-const start = (page - 1) * pageSize;
-const posts = news.slice(start, start + pageSize);
+const { page, totalPages, posts } = Astro.props;
 
 const previousUrl = page === 2 ? "/news/" : `/news/page/${page - 1}/`;
 
