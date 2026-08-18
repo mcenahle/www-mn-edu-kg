@@ -118,6 +118,13 @@ a {
   text-decoration: none !important;
 }
 
+.external-link {
+  text-decoration: underline !important;
+  &:hover {
+    text-decoration: underline dotted !important;
+  }
+}
+
 main {
   height: 100%;
   display: flex;
