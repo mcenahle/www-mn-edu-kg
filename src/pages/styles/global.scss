@@ -22,18 +22,12 @@ body::before {
   width: 100vw;
   height: 100vh;
 
-  background: -webkit-linear-gradient(
-    135deg,
-    #e6dbff 0%,
-    #ffccf1 50%,
-    #ffe694 100%
-  );
-  background: linear-gradient(135deg, #e6dbff 0%, #ffccf1 50%, #ffe694 100%);
+  background-image: url("/images/background.avif");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
   background-position: center center;
-  opacity: 0.2;
+  opacity: 0.3;
   z-index: -1;
   pointer-events: none;
 }
