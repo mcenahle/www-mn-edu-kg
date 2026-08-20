@@ -1,6 +1,6 @@
 @import url("/fonts/source-han-serif/regular/result.css");
 @import url("/fonts/source-han-serif/bold/result.css");
-@import url("/fonts/汇文明朝体/regular/result.css");
+@import url("/fonts/京華老宋体/regular/result.css");
 
 html {
   scroll-behavior: smooth;
@@ -164,6 +164,10 @@ main {
 
 .bg-gray {
   background-color: #e9e9e9 !important;
+}
+
+#footer-font-support {
+  font-family: "KingHwaOldSong";
 }
 
 .external-link::after {
