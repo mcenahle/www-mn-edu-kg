@@ -1,5 +1,6 @@
 @import url("/fonts/source-han-serif/regular/result.css");
 @import url("/fonts/source-han-serif/bold/result.css");
+@import url("/fonts/汇文明朝体/regular/result.css");
 
 html {
   scroll-behavior: smooth;
@@ -33,6 +34,10 @@ body::before {
   opacity: 0.3;
   z-index: -1;
   pointer-events: none;
+}
+
+#news-title {
+  font-family: "Huiwen-mincho" !important;
 }
 
 footer {
