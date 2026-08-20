@@ -34,7 +34,9 @@ const { frontmatter } = Astro.props;
         </div>
       </div>
       <div class="domain-card-body p-4 lh2">
-        <slot />
+        <div class="news">
+          <slot />
+        </div>
         <hr style="margin-top: 36px;" />
         <a class="btn btn-primary" href="/news/" role="button"
           ><Icon name="mdi:arrow-top-left" /> 返回</a
