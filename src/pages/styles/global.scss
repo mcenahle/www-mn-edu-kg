@@ -75,6 +75,17 @@ footer {
   font-style: normal;
 }
 
+@font-face {
+  font-family: "NotoSerifCJKsc-Regular";
+  src: url("/fonts/NotoSerifCJKsc-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.domain-card-body {
+  font-family: "NotoSerifCJKsc-Regular", serif !important;
+}
+
 code {
   font-family: "JetBrainsMono-Regular" !important;
   color: black !important;
