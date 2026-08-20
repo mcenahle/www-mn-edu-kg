@@ -1,3 +1,6 @@
+@import url("/fonts/source-han-serif/regular/result.css");
+@import url("/fonts/source-han-serif/bold/result.css");
+
 html {
   scroll-behavior: smooth;
 }
@@ -75,15 +78,8 @@ footer {
   font-style: normal;
 }
 
-@font-face {
-  font-family: "NotoSerifCJKsc-Regular";
-  src: url("/fonts/NotoSerifCJKsc-Regular.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-}
-
 .news {
-  font-family: "NotoSerifCJKsc-Regular", serif !important;
+  font-family: "MN Source Han Serif SC", serif !important;
 }
 
 code {
