@@ -124,6 +124,15 @@ a {
   text-decoration: none !important;
 }
 
+#offcanvasRight {
+  background: linear-gradient(
+    352deg,
+    rgb(176 176 235),
+    rgb(207 224 255),
+    rgb(200 255 251)
+  );
+}
+
 .external-link {
   text-decoration: underline !important;
   &:hover {
