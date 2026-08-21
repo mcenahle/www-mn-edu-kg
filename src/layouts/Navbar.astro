@@ -11,18 +11,28 @@ import { Icon } from "astro-icon/components";
     www.mn.edu.kg
   </a>
 
-  <!-- Toggler/collapsibe Button -->
   <button
+    type="button"
+    class="ms-auto btn btn-primary"
+    style="margin-right: 8px; width: 120px"
+    data-bs-toggle="offcanvas"
+    data-bs-target="#offcanvasRight"
+    aria-controls="offcanvasRight"
+    ><Icon name="mdi:more-circle-outline" /> 显示更多</button
+  >
+
+  <!-- Toggler/collapsibe Button -->
+  <!-- <button
     class="navbar-toggler"
     type="button"
     data-bs-toggle="collapse"
     data-bs-target="#collapsibleNavbar"
   >
     <span class="navbar-toggler-icon"></span>
-  </button>
+  </button> -->
 
   <!-- Navbar links -->
-  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+  <!-- <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="navbar-nav ms-3 me-3">
       <li class="nav-item">
         <a
@@ -94,5 +104,62 @@ import { Icon } from "astro-icon/components";
         >
       </li>
     </ul>
-  </div>
+  </div> -->
 </nav>
+
+<div
+  class="offcanvas offcanvas-end"
+  tabindex="-1"
+  id="offcanvasRight"
+  aria-labelledby="offcanvasRightLabel"
+>
+  <div class="offcanvas-header">
+    <h5 id="offcanvasRightLabel">www.mn.edu.kg</h5>
+    <button
+      type="button"
+      class="btn-close text-reset"
+      data-bs-dismiss="offcanvas"
+      aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <h5>本网站相关资源</h5>
+    <div class="row g-3">
+      <div class="col-6">
+        <a href="/news/" class="btn btn-primary w-100" role="button"
+          >站点新闻 <Icon name="mdi:arrow-top-right" /></a
+        >
+      </div>
+      <div class="col-6">
+        <a
+          href="https://www.shm.ac.cn"
+          target="_blank"
+          class="btn btn-outline-primary w-100"
+          role="button">备用网站 <Icon name="mdi:open-in-new" /></a
+        >
+      </div>
+    </div>
+    <hr />
+    <h5>个人运行的其它网站</h5>
+    <ul>
+      <li>
+        <a href="https://hi.mcenahle.page" target="_blank"
+          ><u>个人主页网站</u> <Icon name="mdi:open-in-new" /></a
+        >
+      </li>
+      <li>
+        <a href="https://blog.mcenahle.page" target="_blank"
+          ><u>博客网站（梅之夏）</u> <Icon name="mdi:open-in-new" /></a
+        >
+      </li>
+    </ul>
+    <hr />
+    <h5>近期相关</h5>
+    <ul>
+      <li>
+        <a href="https://www.shnu.edu.cn" target="_blank"
+          ><u>上海师范大学</u> <Icon name="mdi:open-in-new" /></a
+        >
+      </li>
+    </ul>
+  </div>
+</div>
