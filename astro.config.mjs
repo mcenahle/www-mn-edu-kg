@@ -1,6 +1,7 @@
 import { defineConfig } from "astro/config";
 import icon from "astro-icon";
 import rehypeExternalLinks from "rehype-external-links";
+import pagefind from "astro-pagefind";
 
 export default defineConfig({
   site: "https://www.mn.edu.kg",
@@ -11,7 +12,7 @@ export default defineConfig({
     enabled: false,
   },
 
-  integrations: [icon()],
+  integrations: [icon(), pagefind()],
 
   markdown: {
     rehypePlugins: [
