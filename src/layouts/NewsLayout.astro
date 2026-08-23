@@ -6,6 +6,7 @@ import { Icon } from "astro-icon/components";
 interface Props {
   title: string;
   date: string;
+  author: string;
   // numeric_version: string;
 }
 
@@ -26,7 +27,10 @@ const { frontmatter } = Astro.props;
         </div>
         <div class="d-flex align-items-center justify-content-between">
           <div class="small text-muted mt-2">
-            <Icon name="mdi:calendar" /> 日期：{frontmatter.date}
+            <span style="margin-right: 10px;"
+              ><Icon name="mdi:calendar" /> 日期：{frontmatter.date}</span
+            >
+            <Icon name="mdi:account-check" /> 作者：{frontmatter.author}
           </div>
           <div class="share-warp small text-muted mt-2">
             <!-- <Icon name="mdi:android-studio" /> 数值版本号：{numeric_version} -->
