@@ -131,9 +131,27 @@ a {
   text-decoration: none !important;
 }
 
-a:focus {
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
+// a:focus {
+//   outline: 5px auto -webkit-focus-ring-color;
+//   outline-offset: -2px;
+// }
+
+$focus-color: #cacaca;
+$hover-color: #dbdbdb;
+
+.news {
+  a {
+    font-weight: bold;
+    padding: 4px;
+    &:focus {
+      background-color: $focus-color;
+      border-radius: 4px;
+      padding: 4px;
+    }
+    &:hover {
+      background-color: $hover-color;
+    }
+  }
 }
 
 #offcanvasRight {
@@ -147,8 +165,13 @@ a:focus {
 
 .external-link {
   text-decoration: underline !important;
+  border-radius: 4px;
   &:hover {
-    text-decoration: underline dotted !important;
+    // text-decoration: underline dotted !important;
+    background-color: $hover-color;
+  }
+  &:active {
+    background-color: $hover-color;
   }
 }
 
